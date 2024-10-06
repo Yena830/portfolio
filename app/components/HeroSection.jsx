@@ -11,11 +11,11 @@ const blackOpsOne = Black_Ops_One({
 
 const HeroSection = () => {
   return (
-    <section>
-      <div className="grid grid-cols-1 sm:grid-cols-12 pt-5">
-        <div className="col-span-7 place-self-cente text-center sm:text-left">
+    <section className="lg:py-16">
+      <div className="grid grid-cols-1 sm:grid-cols-12 ">
+        <div className="col-span-7 place-self-center text-center sm:text-left justify-self-start">
           <h1
-            className={`text-white mb-4 text-4xl sm:text-5xl lg:text-7xl ${blackOpsOne.className}`}
+            className={`text-white mb-4 text-4xl sm:text-5xl lg:text-8xl ${blackOpsOne.className}`}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#01aae7] via-[#fab0cd] to-[#e33c82]">
               HELLO, I'M{" "}
@@ -30,7 +30,9 @@ const HeroSection = () => {
                 1000,
                 "A UIUC Student",
                 1000,
-                "Software Developer",
+                "Web Developer",
+                1000,
+                "Full Stack Dev",
                 1000,
               ]}
               wrapper="span"
@@ -38,14 +40,15 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-            tempore nihil ipsum, laboriosam alias maiores deleniti ad eligendi
-            repellendus?
+          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-2xl">
+            All our dreams can come true, if we have the courage to pursue
+            them.✨
           </p>
           <div>
             <button
-              className="font-bold
+              className="
+              inline-block
+              font-bold
               px-0 
             py-0
             mr-4 
@@ -79,12 +82,12 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="col-span-5 place-self-center mt-8 lg:mt-0">
-          <div className="rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[500px] lg:h-[500px] relative">
             <Image
               src="/images/image2.png"
               alt="image"
-              width={400}
-              height={400}
+              width={500}
+              height={500}
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               style={{ borderRadius: "80%" }}
             ></Image>

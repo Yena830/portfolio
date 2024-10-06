@@ -9,7 +9,7 @@ const Model = ({ isUserInteracting, setIsUserInteracting }) => {
   const [timer, setTimer] = useState(null);
 
   scene.scale.set(1.5, 1.5, 1.5);
-  scene.position.set(0, -1.2, 0);
+  scene.position.set(0, -1.5, 0);
 
   useEffect(() => {
     if (actions && actions["Experiment"]) {
@@ -17,26 +17,26 @@ const Model = ({ isUserInteracting, setIsUserInteracting }) => {
     }
   }, [actions]);
 
-  useEffect(() => {
-    if (actions && actions["Experiment"]) {
-      actions["Experiment"].paused = isUserInteracting;
-    }
-  }, [isUserInteracting, actions]);
+  //   useEffect(() => {
+  //     if (actions && actions["Experiment"]) {
+  //       actions["Experiment"].paused = isUserInteracting;
+  //     }
+  //   }, [isUserInteracting, actions]);
 
-  const handleClick = () => {
-    setIsUserInteracting((prev) => !prev);
-    const nowState = !prev;
-    if (nowState) {
-      clearTimeout(timer);
-    } else {
-      const newTimer = setTimeout(() => {
-        setIsUserInteracting(false);
-      }, 500);
-      setTimer(newTimer);
-    }
-    return nowState;
-  };
-  return <primitive ref={modelRef} object={scene} onClick={handleClick} />;
+  //   const handleClick = () => {
+  //     setIsUserInteracting((prev) => !prev);
+  //     const nowState = !prev;
+  //     if (nowState) {
+  //       clearTimeout(timer);
+  //     } else {
+  //       const newTimer = setTimeout(() => {
+  //         setIsUserInteracting(false);
+  //       }, 500);
+  //       setTimer(newTimer);
+  //     }
+  //     return nowState;
+  //   };
+  return <primitive ref={modelRef} object={scene} />;
 };
 
 export default Model;

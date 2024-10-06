@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#171516]">
       <Navbar />
-      <div className="container mt-24 mx-auto px-12 pt-6 pb-4">
+      <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
         <AboutSection />
         {/* <div style={{ height: "50vh", width: "100%" }}>
