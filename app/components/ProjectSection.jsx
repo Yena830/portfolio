@@ -69,8 +69,8 @@ const ProjectSection = () => {
     setTag(newTag);
   };
   return (
-    <>
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+    <section id="projects" className="pt-12">
+      <h2 className="text-center text-4xl font-bold text-white mt-8 mb-5 md:mb-10">
         My Projects
       </h2>
       <div className="flex flex-row justify-center items-center gap-4 text-white my-6">
@@ -102,7 +102,7 @@ const ProjectSection = () => {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 export default ProjectSection;

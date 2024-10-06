@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { Black_Ops_One } from "@next/font/google";
-import { Sono } from "@next/font/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,15 +13,15 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const sono = Sono({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-});
-
 const blackOpsOne = Black_Ops_One({
   subsets: ["latin"],
   weight: ["400"],
 });
+
+export const metadata = {
+  title: "Yena",
+  description: "Designed by Yena",
+};
 
 export default function RootLayout({ children }) {
   return (

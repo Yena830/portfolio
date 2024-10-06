@@ -51,7 +51,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section>
+    <section id="about" className="pt-6">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           src="/images/computer.jpg"
@@ -65,7 +65,7 @@ const AboutSection = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
             About Me
           </h2>
-          <p className="text-base md:text-lg text-[#cdd8df]">
+          <p className="text-base md:text-lg text-justify text-[#cdd8df]">
             I am a graduate student majoring in information science now. I am
             working towards the career path of a full-stack web developer. I
             have experience working with python, Java, JabaScript, React, HEML,

@@ -1,8 +1,9 @@
-import Image from "next/image";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";
 import ProjectSection from "./components/ProjectSection";
+import EmailSection from "./components/EmailSection.jsx";
+import Footer from "./components/Footer.jsx";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
         <div className="py-10"></div>
         <AboutSection />
         <ProjectSection />
+        <EmailSection />
       </div>
+      <Footer />
     </main>
   );
 }
