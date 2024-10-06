@@ -4,6 +4,7 @@ import AboutSection from "./components/AboutSection";
 import ProjectSection from "./components/ProjectSection";
 import EmailSection from "./components/EmailSection.jsx";
 import Footer from "./components/Footer.jsx";
+import Scene from "./components/Scene";
 
 export default function Home() {
   return (
@@ -11,8 +12,10 @@ export default function Home() {
       <Navbar />
       <div className="container mt-24 mx-auto px-12 pt-6 pb-4">
         <HeroSection />
-        <div className="py-10"></div>
         <AboutSection />
+        {/* <div style={{ height: "50vh", width: "100%" }}>
+          <Scene />
+        </div> */}
         <ProjectSection />
         <EmailSection />
       </div>

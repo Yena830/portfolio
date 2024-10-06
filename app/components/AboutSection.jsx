@@ -2,6 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import { TabButton } from "./TabButton";
+import Scene from "./Scene";
 
 const TAB_DATA = [
   {
@@ -53,13 +54,14 @@ const AboutSection = () => {
   return (
     <section id="about" className="pt-6">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image
+        {/* <Image
           src="/images/computer.jpg"
           width={500}
           height={500}
           alt="Computer Image"
           className="rounded-xl"
-        />
+        /> */}
+        <Scene />
 
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
