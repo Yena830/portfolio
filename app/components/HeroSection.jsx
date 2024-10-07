@@ -47,10 +47,11 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-2xl">
+          <p className="text-[#ADB7BE] text-base sm:text-base mb-6 lg:text-2xl ">
             All our dreams can come true, if we have the courage to pursue
             them.✨
           </p>
+
           <div>
             <Link
               href="/#contact"
@@ -99,9 +100,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-8 lg:mt-0"
+          className="col-span-4 place-self-center mt-8  lg:mt-0"
         >
-          <div className="rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[450px] lg:h-[450px] relative">
+          <div className="rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px] relative">
             <Image
               src="/images/image2.png"
               alt="image"

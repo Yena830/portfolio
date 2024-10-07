@@ -23,8 +23,16 @@ const TAB_DATA = [
     id: "experience",
     content: (
       <ul className="list-disc pl-2">
-        <li>111</li>
-        <li>222</li>
+        <li>
+          Envision Energy Co. Ltd.: Commercial Representative and Bid
+          Project.Managed bid projects and led cross-departmental meetings.
+          Manager.
+        </li>
+        <li>
+          Lilith Games: Legal Affairs Specialist Intern. Developed IP-related
+          contract templates and assisted with a cloud-based contract management
+          system. Achieved a 20% reduction in contract resolution time.
+        </li>
       </ul>
     ),
   },
@@ -70,12 +78,12 @@ const AboutSection = () => {
               About Me
             </h2>
             <p className="text-base sm:text-lg lg:text-xl xl:text-xl text-justify text-[#b7bfc5] leading-loose">
-              I am a graduate student majoring in information science now. I am
-              working towards the career path of a full-stack web developer. I
-              have experience working with python, Java, JabaScript, React,
-              HEML, CSS, and Git. I am a quick learner and I am always looking
-              to expand my knowledge and skill set. I am a team player and I am
-              exited to work with others to create amazing applications.
+              I am a graduate student majoring in Information Science and
+              currently pursuing a career as a full-stack web developer. I have
+              experience working with Python, Java, JavaScript, React, HTML,
+              CSS, and Git. I am a quick learner who is eager to expand my
+              knowledge and skill set. I am a strong team player and excited to
+              collaborate with others to create amazing applications.
             </p>
             <div className="flex flex-row mt-8">
               <TabButton
