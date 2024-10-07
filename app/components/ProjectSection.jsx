@@ -2,8 +2,8 @@
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
-
-import { motion, useInView } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { animate, motion } from "framer-motion";
 
 const projectsData = [
   {
@@ -68,6 +68,15 @@ const ProjectSection = () => {
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
+
+  const cardAnimation = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section id="projects" className="pt-12">
       <h2 className="text-center text-4xl font-bold text-white mt-8 mb-5 md:mb-10">
@@ -90,16 +99,24 @@ const ProjectSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {fileredProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.image}
-            gitUrl={project.gitUrl}
-            previewUrl={project.previewUrl}
-          />
+      <div ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {fileredProjects.map((project, index) => (
+          <motion.div
+            key={index}
+            variants={cardAnimation}
+            initial="initial"
+            animate={inView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
+          >
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              gitUrl={project.gitUrl}
+              previewUrl={project.previewUrl}
+            />
+          </motion.div>
         ))}
       </div>
     </section>

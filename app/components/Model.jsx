@@ -8,8 +8,10 @@ const Model = ({ isUserInteracting, setIsUserInteracting }) => {
   const { actions } = useAnimations(animations, modelRef);
   const [timer, setTimer] = useState(null);
 
-  scene.scale.set(1.5, 1.5, 1.5);
+  const [modelScale, setModelScale] = useState(1.5);
+
   scene.position.set(0, -1.5, 0);
+  scene.scale.set(1.5, 1.5, 1.5);
 
   useEffect(() => {
     if (actions && actions["Experiment"]) {

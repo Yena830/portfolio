@@ -3,6 +3,8 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { Black_Ops_One } from "@next/font/google";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const blackOpsOne = Black_Ops_One({
   subsets: ["latin"],
@@ -13,7 +15,12 @@ const HeroSection = () => {
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12 ">
-        <div className="col-span-7 place-self-center text-center sm:text-left justify-self-start">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+        >
           <h1
             className={`text-white mb-4 text-4xl sm:text-5xl lg:text-8xl ${blackOpsOne.className}`}
           >
@@ -45,8 +52,11 @@ const HeroSection = () => {
             them.✨
           </p>
           <div>
-            <button
+            <Link
+              href="/#contact"
               className="
+              text-lg
+              xl:text-xl
               inline-block
               font-bold
               px-0 
@@ -57,42 +67,51 @@ const HeroSection = () => {
             rounded-full
             bg-gradient-to-br from-[#d6d144] via-[#01aae7]  to-[#ef1c74]  
             text-white
-            hover:bg-slate-200
+            hover:scale-105
+            duration-300
             "
             >
-              <span className="block bg-[#ffffff00] hover:bg-[#ADB7BE] rounded-full px-6 py-3 duration-300">
+              <span className="block bg-[#ffffff00] hover:bg-[#ADB7BE] rounded-full px-6 py-3 xl:px-9 xl:py-5 ">
                 Hire me
               </span>
-            </button>
+            </Link>
             <button
-              className="font-bold
+              className="
+              text-lg
+              xl:text-xl font-bold
               px-1
               py-1
-            w-full 
-            sm:w-fit 
+              w-full 
+              sm:w-fit 
               rounded-full
               bg-gradient-to-br from-[#0e9ed2] to-[#f0438c]
               text-white
-              mt-3"
+              mt-3 duration-300
+              hover:scale-105"
             >
-              <span className="block bg-[#171516] hover:bg-[#252123] rounded-full px-5 py-2  duration-300">
+              <span className="block bg-[#171516] hover:bg-[#252123] rounded-full px-5 py-2 xl:px-8 xl:py-4  duration-300 ">
                 Download CV
               </span>
             </button>
           </div>
-        </div>
-        <div className="col-span-5 place-self-center mt-8 lg:mt-0">
-          <div className="rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[500px] lg:h-[500px] relative">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-4 place-self-center mt-8 lg:mt-0"
+        >
+          <div className="rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[450px] lg:h-[450px] relative">
             <Image
               src="/images/image2.png"
               alt="image"
-              width={500}
-              height={500}
+              width={450}
+              height={450}
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               style={{ borderRadius: "80%" }}
             ></Image>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
