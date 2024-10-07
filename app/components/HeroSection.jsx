@@ -25,7 +25,7 @@ const HeroSection = () => {
             className={`text-white mb-4 text-4xl sm:text-5xl lg:text-8xl ${blackOpsOne.className}`}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#01aae7] via-[#fab0cd] to-[#e33c82]">
-              HELLO, I'M{" "}
+              HELLO, I&apos;M{" "}
             </span>
             <br></br>
             <TypeAnimation

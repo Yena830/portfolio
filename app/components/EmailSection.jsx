@@ -40,11 +40,13 @@ const EmailSection = () => {
     >
       <div className="absolute w-40 h-40 lg:w-96 lg:h-96  sm:w-64 sm:h-64 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#277ca0b8] to-transparent rounded-full blur-lg top-full -left-4 transform -translate-x-1/2 -translate-y-1/2"></div>
       <div z-10>
-        <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
+        <h5 className="text-xl font-bold text-white my-2">
+          Let&apos;s Connect
+        </h5>
         <p className="text-[#Adb7be] mb-4 max-w-md">
-          I'm currently looking for an intern opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I'll try my
-          best to get back to you!
+          I&apos;m currently looking for an intern opportunities, my inbox is
+          always open. Whether you have a question or just want to say hi,
+          I&apos;ll try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/Yena830">
