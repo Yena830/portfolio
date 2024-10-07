@@ -70,22 +70,24 @@ const Navbar = () => {
             YENA
           </Link>
         </div>
-        <div className="socials flex flex-row justify-end gap-2 col-span-1 items-end">
-          <Link href="https://github.com/Yena830">
-            <Image src="/github-icon.svg" width={30} height={30} />
-          </Link>
-          <Link href="https://www.linkedin.com/in/yena830/">
-            <Image
-              src="/linkedin-icon.svg"
-              width={30}
-              height={30}
-              style={{
-                filter:
-                  "invert(41%) sepia(93%) saturate(1963%) hue-rotate(177deg) brightness(110%) contrast(88%)",
-              }}
-            />
-          </Link>
-        </div>
+        {!navbarOpen ? (
+          <div className="flex flex-row justify-end gap-2 col-span-1">
+            <Link href="https://github.com/Yena830">
+              <Image src="/github-icon.svg" width={30} height={30} />
+            </Link>
+            <Link href="https://www.linkedin.com/in/yena830/">
+              <Image
+                src="/linkedin-icon.svg"
+                width={30}
+                height={30}
+                style={{
+                  filter:
+                    "invert(41%) sepia(93%) saturate(1963%) hue-rotate(177deg) brightness(110%) contrast(88%)",
+                }}
+              />
+            </Link>
+          </div>
+        ) : null}
       </div>
     </nav>
   );

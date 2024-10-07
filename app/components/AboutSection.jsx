@@ -101,7 +101,7 @@ const AboutSection = () => {
                 Experience{" "}
               </TabButton>
             </div>
-            <div className="mt-8 xl:text-xl">
+            <div className="mt-8">
               {TAB_DATA.find((e) => e.id === tab).content}
             </div>
           </div>
