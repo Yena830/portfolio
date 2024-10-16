@@ -76,8 +76,9 @@ const HeroSection = () => {
                 Hire me
               </span>
             </Link>
-            <button
-              className="
+            <Link href="/cv/Lyy_CV.pdf">
+              <button
+                className="
               text-lg
               xl:text-xl font-bold
               px-1
@@ -89,11 +90,12 @@ const HeroSection = () => {
               text-white
               mt-3 duration-300
               hover:scale-105"
-            >
-              <span className="block bg-[#171516] hover:bg-[#252123] rounded-full px-5 py-2 xl:px-8 xl:py-4  duration-300 ">
-                Download CV
-              </span>
-            </button>
+              >
+                <span className="block bg-[#171516] hover:bg-[#252123] rounded-full px-5 py-2 xl:px-8 xl:py-4  duration-300 ">
+                  Download CV
+                </span>
+              </button>
+            </Link>
           </div>
         </motion.div>
         <motion.div
