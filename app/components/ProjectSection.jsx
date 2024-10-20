@@ -8,10 +8,10 @@ import { animate, motion } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Personal Website",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    title: "Smart Trip App",
+    description: "AI customized trip assitance App",
+    image: "/images/projects/1.jpg",
+    tag: ["All", "Web", "Mobile"],
     gitUrl: "/",
     previewUrl: "/",
   },
