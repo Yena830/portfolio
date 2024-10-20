@@ -24,9 +24,8 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>
-          Envision Energy Co. Ltd.: Commercial Representative and Bid
+          Envision Energy Co. Ltd.: Commercial Representative and Bid Manager.
           Project.Managed bid projects and led cross-departmental meetings.
-          Manager.
         </li>
         <li>
           Lilith Games: Legal Affairs Specialist Intern. Developed IP-related
