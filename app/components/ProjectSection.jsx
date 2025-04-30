@@ -12,7 +12,7 @@ const projectsData = [
     description: "AI customized trip assitance App",
     image: "/images/projects/1.jpg",
     tag: ["All", "Web", "Mobile"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Yena830/travel_agent",
     previewUrl: "/",
   },
   {
@@ -26,6 +26,15 @@ const projectsData = [
   },
   {
     id: 3,
+    title: "Whispers of the Maze",
+    description: "A puzzle game where players navigate a hidden maze using only audio cues.",
+    image: "/images/projects/5.png",
+    tag: ["All"],
+    gitUrl: "https://github.com/Yena830/2025Spr_projects_Whispers_of_the_Maze",
+    previewUrl: "/",
+  },
+  {
+    id: 4,
     title: "React Forum Website",
     description: "A website allow userd to share something.",
     image: "/images/projects/3.png",
@@ -34,14 +43,15 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Food Ordering Application",
-    description: "Project 4 description",
+    description: "A Food Ordering App.",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "/",
     previewUrl: "/",
   },
+
 ];
 
 const ProjectSection = () => {

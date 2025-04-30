@@ -11,10 +11,10 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="text-base list-disc pl-2 font-simibold">
-        <li>MSIM, University of Illinois, Champaign-Urbana</li>
-        <li>LAW, Fudan University</li>
-        <li>ACCOUNTING, Tongji University</li>
+      <ul className="text-base list-disc pl-2 font-semibold text-[#b7bfc5]">
+        <li>Master of Information Science, UIUC</li>
+        <li>Law, Fudan University</li>
+        <li>Accounting, Tongji University</li>
       </ul>
     ),
   },
@@ -22,20 +22,21 @@ const TAB_DATA = [
     title: "Experience",
     id: "experience",
     content: (
-      <ul className="list-disc pl-2">
-        <li>
-          Envision Energy Co. Ltd.: Commercial Representative and Bid Manager.
-          Project.Managed bid projects and led cross-departmental meetings.
-        </li>
-        <li>
-          Lilith Games: Legal Affairs Specialist Intern. Developed IP-related
-          contract templates and assisted with a cloud-based contract management
-          system. Achieved a 20% reduction in contract resolution time.
-        </li>
+      <ul className="list-disc pl-2 font-normal text-[#b7bfc5]">
+        <p className="font-semibold text-[#b7bfc5]">Envision Energy: Technical Solutions Engineer</p>
+          <ul className="list-disc pl-4">
+            <li>Architected AI-driven document analysis system, processing multi-language content with 28% improvement.</li>
+            <li>Implemented serverless backend with AWS Lambda, S3, and SQS, handling 1,000+ documents monthly.</li>
+            <li>Engineered containerized OCR service using PaddleOCR on AWS Fargate for non-English documents.</li>
+            <li>Deployed fine-tuned LLM for contract analysis, storing structured results in PostgreSQL JSONB columns.</li>
+            <li>Developed React frontend with document preview and LLM-generated annotations, reducing report time by 32%.</li>
+          </ul>
+
       </ul>
     ),
   },
 ];
+
 
 const AboutSection = () => {
   const [tab, setTab] = useState("education");
@@ -84,7 +85,7 @@ const AboutSection = () => {
               knowledge and skill set. I am a strong team player and excited to
               collaborate with others to create amazing applications.
             </p>
-            <div className="flex flex-row mt-8">
+            <div className="flex flex-row mt-8 text-[#b7bfc5]">
               <TabButton
                 selectTab={() => handleTabChange("education")}
                 active={tab === "education"}
@@ -100,7 +101,7 @@ const AboutSection = () => {
                 Experience{" "}
               </TabButton>
             </div>
-            <div className="mt-8">
+            <div className="mt-8 ext-[#b7bfc5]">
               {TAB_DATA.find((e) => e.id === tab).content}
             </div>
           </div>
