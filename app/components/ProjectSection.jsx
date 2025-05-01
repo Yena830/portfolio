@@ -13,7 +13,7 @@ const projectsData = [
     image: "/images/projects/1.jpg",
     tag: ["All", "Web", "Mobile"],
     gitUrl: "https://github.com/Yena830/travel_agent",
-    previewUrl: "/",
+    previewUrl: "https://travel-agent-gamma.vercel.app/",
   },
   {
     id: 2,
