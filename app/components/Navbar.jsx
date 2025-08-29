@@ -82,7 +82,7 @@ const Navbar = () => {
                 height={30}
                 style={{
                   filter:
-                    "invert(41%) sepia(93%) saturate(1963%) hue-rotate(177deg) brightness(110%) contrast(88%)",
+                      "invert(41%) sepia(93%) saturate(1963%) hue-rotate(177deg) brightness(110%) contrast(88%)",
                 }}
               />
             </Link>

@@ -24,11 +24,11 @@ const HeroSection = () => {
           <h1
             className={`text-white mb-4 text-4xl sm:text-5xl lg:text-8xl ${blackOpsOne.className}`}
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#01aae7] via-[#fab0cd] to-[#e33c82]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6F61] via-[#FF9A76] to-[#FFD8A8]">
               HELLO, I&apos;M{" "}
             </span>
             <br></br>
-            <TypeAnimation
+            <TypeAnimation className="text-[#F5F5F5]"
               sequence={[
                 // Same substring at the start will only be typed out once, initially
                 "Yena",
@@ -37,7 +37,7 @@ const HeroSection = () => {
                 1000,
                 "A UIUC Student",
                 1000,
-                "Web Developer",
+                "Software Dev",
                 1000,
                 "Full Stack Dev",
                 1000,
@@ -66,17 +66,17 @@ const HeroSection = () => {
             w-full 
             sm:w-fit 
             rounded-full
-            bg-gradient-to-br from-[#d6d144] via-[#01aae7]  to-[#ef1c74]  
+            bg-gradient-to-br from-[#FFB199] to-[#8B2E2E]
             text-white
             hover:scale-105
             duration-300
             "
             >
-              <span className="block bg-[#ffffff00] hover:bg-[#ADB7BE] rounded-full px-6 py-3 xl:px-9 xl:py-5 ">
+              <span className="block bg-[#ffffff00] hover:bg-[#8B2E2E] rounded-full px-6 py-3 xl:px-9 xl:py-5 ">
                 Hire me
               </span>
             </Link>
-            <Link href="/cv/cv-Yueyue Lin.pdf">
+            <Link href="/cv/Yueyue Lin.pdf">
               <button
                 className="
               text-lg
@@ -86,7 +86,7 @@ const HeroSection = () => {
               w-full 
               sm:w-fit 
               rounded-full
-              bg-gradient-to-br from-[#0e9ed2] to-[#f0438c]
+              bg-gradient-to-br from-[#FFB199] to-[#8B2E2E]
               text-white
               mt-3 duration-300
               hover:scale-105"
@@ -106,7 +106,7 @@ const HeroSection = () => {
         >
           <div className="rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px] relative">
             <Image
-              src="/images/image2.png"
+              src="/images/icon.jpg"
               alt="image"
               width={450}
               height={450}
