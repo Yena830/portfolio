@@ -22,7 +22,7 @@ const HeroSection = () => {
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <h1
-            className={`text-white mb-4 text-4xl sm:text-5xl lg:text-7xl ${blackOpsOne.className}`}
+            className={`text-white mb-4 text-4xl sm:text-5xl lg:text-8xl ${blackOpsOne.className}`}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6F61] via-[#FF9A76] to-[#FFD8A8]">
               HELLO, I&apos;M{" "}
@@ -104,7 +104,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-8  lg:mt-0"
         >
-          <div className="rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px] relative">
+          <div className="rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] relative">
             <Image
               src="/images/icon.jpg"
               alt="image"

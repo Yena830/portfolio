@@ -116,48 +116,48 @@ const TAB_DATA = [
             </div>
         ),
     },
-    {
-        title: "Projects",
-        id: "projects",
-        content: (
-            <div className="font-normal text-[#b7bfc5] h-full">
-                <div className="space-y-3">
-                    <div>
-                        <p className="font-semibold mb-2 text-sm">AI Mock Interview Platform (Current)</p>
-                        <ul className="list-disc pl-4 space-y-1 text-xs">
-                            <li>AI-powered mock interview system with multi-round voice-based interactions</li>
-                            <li>Modular LangChain pipelines with OpenAI/Gemini models and LangSmith evaluation</li>
-                            <li>Resume-enhanced RAG system with Pinecone for personalized question generation</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p className="font-semibold mb-2 text-sm">Campus Restaurant Discovery Platform</p>
-                        <ul className="list-disc pl-4 space-y-1 text-xs">
-                            <li>Scalable platform handling 500+ QPS using Java Spring Boot microservices</li>
-                            <li>API Gateway with custom routing, deployed on EC2 with auto-scaling</li>
-                            <li>ElastiCache optimization reducing load times by 79%, secure SMS/JWT authentication</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p className="font-semibold mb-2 text-sm">LLM Travel Itinerary Planner Agent</p>
-                        <ul className="list-disc pl-4 space-y-1 text-xs">
-                            <li>RAG-based travel assistant integrating LLM with Google Maps API</li>
-                            <li>Serverless architecture with Firebase Auth, Firestore, and Cloud Functions</li>
-                            <li>Redis caching reducing API calls by 37%, enhanced accuracy via prompt engineering</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p className="font-semibold mb-2 text-sm">Multi-language Contract Analysis System</p>
-                        <ul className="list-disc pl-4 space-y-1 text-xs">
-                            <li>LLM-based document processing system achieving 28% efficiency improvement</li>
-                            <li>Serverless backend with AWS Lambda/S3/SQS handling 1,000+ documents monthly</li>
-                            <li>Containerized OCR service with PaddleOCR, React frontend with 32% workload reduction</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        ),
-    },
+    // {
+    //     title: "Projects",
+    //     id: "projects",
+    //     content: (
+    //         <div className="font-normal text-[#b7bfc5] h-full">
+    //             <div className="space-y-3">
+    //                 <div>
+    //                     <p className="font-semibold mb-2 text-sm">AI Mock Interview Platform (Current)</p>
+    //                     <ul className="list-disc pl-4 space-y-1 text-xs">
+    //                         <li>AI-powered mock interview system with multi-round voice-based interactions</li>
+    //                         <li>Modular LangChain pipelines with OpenAI/Gemini models and LangSmith evaluation</li>
+    //                         <li>Resume-enhanced RAG system with Pinecone for personalized question generation</li>
+    //                     </ul>
+    //                 </div>
+    //                 <div>
+    //                     <p className="font-semibold mb-2 text-sm">Campus Restaurant Discovery Platform</p>
+    //                     <ul className="list-disc pl-4 space-y-1 text-xs">
+    //                         <li>Scalable platform handling 500+ QPS using Java Spring Boot microservices</li>
+    //                         <li>API Gateway with custom routing, deployed on EC2 with auto-scaling</li>
+    //                         <li>ElastiCache optimization reducing load times by 79%, secure SMS/JWT authentication</li>
+    //                     </ul>
+    //                 </div>
+    //                 <div>
+    //                     <p className="font-semibold mb-2 text-sm">LLM Travel Itinerary Planner Agent</p>
+    //                     <ul className="list-disc pl-4 space-y-1 text-xs">
+    //                         <li>RAG-based travel assistant integrating LLM with Google Maps API</li>
+    //                         <li>Serverless architecture with Firebase Auth, Firestore, and Cloud Functions</li>
+    //                         <li>Redis caching reducing API calls by 37%, enhanced accuracy via prompt engineering</li>
+    //                     </ul>
+    //                 </div>
+    //                 <div>
+    //                     <p className="font-semibold mb-2 text-sm">Multi-language Contract Analysis System</p>
+    //                     <ul className="list-disc pl-4 space-y-1 text-xs">
+    //                         <li>LLM-based document processing system achieving 28% efficiency improvement</li>
+    //                         <li>Serverless backend with AWS Lambda/S3/SQS handling 1,000+ documents monthly</li>
+    //                         <li>Containerized OCR service with PaddleOCR, React frontend with 32% workload reduction</li>
+    //                     </ul>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     ),
+    // },
 ];
 
 const AboutSection = () => {
@@ -179,8 +179,8 @@ const AboutSection = () => {
     return (
         <section id="about" className="py-5 xl:py-20 space-y-10">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-4 px-4 xl:gap-16 sm:py-16 xl:px-5">
-                <Scene />
 
+                <Scene />
                 <motion.div
                     ref={ref}
                     initial="hidden"
@@ -226,12 +226,12 @@ const AboutSection = () => {
                             >
                                 Skills
                             </TabButton>
-                            <TabButton
-                                selectTab={() => handleTabChange("projects")}
-                                active={tab === "projects"}
-                            >
-                                Projects
-                            </TabButton>
+                            {/*<TabButton*/}
+                            {/*    selectTab={() => handleTabChange("projects")}*/}
+                            {/*    active={tab === "projects"}*/}
+                            {/*>*/}
+                            {/*    Projects*/}
+                            {/*</TabButton>*/}
                         </div>
                         <div className="mt-8 text-[#b7bfc5] min-h-[300px] max-h-[300px] overflow-y-auto">
                             {TAB_DATA.find((e) => e.id === tab).content}
