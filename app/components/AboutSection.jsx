@@ -193,12 +193,12 @@ const AboutSection = () => {
                             About Me
                         </h2>
                         <p className="text-base sm:text-lg lg:text-xl xl:text-xl text-justify text-[#b7bfc5] leading-loose">
-                            I am a Master's student in Information Science at UIUC with a passion for developing
+                            I am a Master&apos;s student in Information Science at UIUC with a passion for developing
                             intelligent systems and full-stack applications. Currently working as a Software Engineer
                             Intern at Amiggle LLC, I specialize in AI-powered solutions, leveraging cutting-edge
                             technologies like LangChain, OpenAI models, and cloud infrastructure. With experience
                             in building scalable systems from serverless backends to interactive frontends, I enjoy
-                            solving complex problems and creating impactful software solutions. I'm always eager
+                            solving complex problems and creating impactful software solutions. I&apos;m always eager
                             to learn new technologies and collaborate with teams to build innovative applications.
                         </p>
                         <div className="flex flex-row flex-wrap mt-8 text-[#b7bfc5] gap-2">
