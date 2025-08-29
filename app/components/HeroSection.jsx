@@ -22,7 +22,7 @@ const HeroSection = () => {
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <h1
-            className={`text-white mb-4 text-4xl sm:text-5xl lg:text-8xl ${blackOpsOne.className}`}
+            className={`text-white mb-4 text-4xl sm:text-5xl lg:text-7xl ${blackOpsOne.className}`}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6F61] via-[#FF9A76] to-[#FFD8A8]">
               HELLO, I&apos;M{" "}
@@ -35,7 +35,7 @@ const HeroSection = () => {
                 1000,
                 "Yueyue Lin",
                 1000,
-                "A UIUC Student",
+                "UIUC’er",
                 1000,
                 "Software Dev",
                 1000,
