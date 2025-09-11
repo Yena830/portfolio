@@ -76,7 +76,7 @@ const HeroSection = () => {
                 Hire me
               </span>
             </Link>
-            <Link href="/cv/Yueyue Lin.pdf">
+            <Link href="/cv/Yueyue_Lin.pdf">
               <button
                 className="
               text-lg
