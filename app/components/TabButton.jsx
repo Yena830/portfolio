@@ -7,7 +7,7 @@ const variants = {
 };
 
 export const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
+  const buttonClasses = active ? "text-white" : "text-pink-100";
   return (
     <button onClick={selectTab}>
       <p
@@ -18,7 +18,7 @@ export const TabButton = ({ active, selectTab, children }) => {
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}
-        className="h-0.5 bg-[#FFB199] mt-2 mr-3"
+        className="h-0.5 bg-pink-400 mt-2 mr-3"
       ></motion.div>
     </button>
   );

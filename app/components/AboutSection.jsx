@@ -11,7 +11,7 @@ const TAB_DATA = [
         title: "Education",
         id: "education",
         content: (
-            <ul className="text-base list-disc pl-2 font-semibold text-[#b7bfc5]">
+            <ul className="text-base list-disc pl-2 font-semibold text-pink-100">
                 <li>Master of Information Science, UIUC</li>
                 <li>Law, Fudan University</li>
                 <li>Accounting, Tongji University</li>
@@ -22,8 +22,8 @@ const TAB_DATA = [
         title: "Current Role",
         id: "current",
         content: (
-            <div className="font-normal text-[#b7bfc5] h-full">
-                <p className="font-semibold text-[#b7bfc5] mb-3 text-sm">
+            <div className="font-normal text-pink-100 h-full">
+                <p className="font-semibold text-pink-100 mb-3 text-sm">
                     Software Engineer Intern | Remote US <br />
                     Amiggle LLC | Jun. 2025 – Present
                 </p>
@@ -42,8 +42,8 @@ const TAB_DATA = [
         title: "Previous Experience",
         id: "previous",
         content: (
-            <div className="font-normal text-[#b7bfc5] h-full">
-                <p className="font-semibold text-[#b7bfc5] mb-3 text-sm">
+            <div className="font-normal text-pink-100 h-full">
+                <p className="font-semibold text-pink-100 mb-3 text-sm">
                     Technical Solutions Engineer | Shanghai, China <br />
                     Envision Energy Co. | Jul. 2023 – Nov. 2023
                 </p>
@@ -62,7 +62,7 @@ const TAB_DATA = [
         title: "Skills",
         id: "skills",
         content: (
-            <div className="font-normal text-[#b7bfc5] h-full">
+            <div className="font-normal text-pink-100 h-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div>
                         <p className="font-semibold mb-2 text-sm">Programming Languages</p>
@@ -120,7 +120,7 @@ const TAB_DATA = [
     //     title: "Projects",
     //     id: "projects",
     //     content: (
-    //         <div className="font-normal text-[#b7bfc5] h-full">
+    //         <div className="font-normal text-pink-100 h-full">
     //             <div className="space-y-3">
     //                 <div>
     //                     <p className="font-semibold mb-2 text-sm">AI Mock Interview Platform (Current)</p>
@@ -177,67 +177,93 @@ const AboutSection = () => {
     };
 
     return (
-        <section id="about" className="py-5 xl:py-20 space-y-10">
-            <div className="md:grid md:grid-cols-2 gap-8 items-center py-4 px-4 xl:gap-16 sm:py-16 xl:px-5">
+        <section id="about" className="py-16 xl:py-24">
+            <div className="container mx-auto px-6">
+                {/* 标题区域 */}
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        About <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-500">Me</span>
+                    </h2>
+                    <div className="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+                </div>
 
-                <Scene />
-                <motion.div
-                    ref={ref}
-                    initial="hidden"
-                    variants={imageVariants}
-                    animate={inView ? "visible" : "hidden"}
-                    transition={{ duration: 0.8 }}
-                >
-                    <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-                            About Me
-                        </h2>
-                        <p className="text-base sm:text-lg lg:text-xl xl:text-xl text-justify text-[#b7bfc5] leading-loose">
-                            I am a Master&apos;s student in Information Science at UIUC with a passion for developing
-                            intelligent systems and full-stack applications. Currently working as a Software Engineer
-                            Intern at Amiggle LLC, I specialize in AI-powered solutions, leveraging cutting-edge
-                            technologies like LangChain, OpenAI models, and cloud infrastructure. With experience
-                            in building scalable systems from serverless backends to interactive frontends, I enjoy
-                            solving complex problems and creating impactful software solutions. I&apos;m always eager
-                            to learn new technologies and collaborate with teams to build innovative applications.
-                        </p>
-                        <div className="flex flex-row flex-wrap mt-8 text-[#b7bfc5] gap-2">
-                            <TabButton
-                                selectTab={() => handleTabChange("education")}
-                                active={tab === "education"}
-                            >
-                                Education
-                            </TabButton>
-                            <TabButton
-                                selectTab={() => handleTabChange("current")}
-                                active={tab === "current"}
-                            >
-                                Current Role
-                            </TabButton>
-                            <TabButton
-                                selectTab={() => handleTabChange("previous")}
-                                active={tab === "previous"}
-                            >
-                                Previous Experience
-                            </TabButton>
-                            <TabButton
-                                selectTab={() => handleTabChange("skills")}
-                                active={tab === "skills"}
-                            >
-                                Skills
-                            </TabButton>
-                            {/*<TabButton*/}
-                            {/*    selectTab={() => handleTabChange("projects")}*/}
-                            {/*    active={tab === "projects"}*/}
-                            {/*>*/}
-                            {/*    Projects*/}
-                            {/*</TabButton>*/}
+                <div className="grid lg:grid-cols-2 gap-12 items-start">
+                    {/* 左侧：3D场景 */}
+                    <motion.div
+                        ref={ref}
+                        initial="hidden"
+                        variants={imageVariants}
+                        animate={inView ? "visible" : "hidden"}
+                        transition={{ duration: 0.8 }}
+                        className="order-2 lg:order-1 h-[400px] lg:h-[500px]"
+                    >
+                        <Scene />
+                    </motion.div>
+
+                    {/* 右侧：内容区域 */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="order-1 lg:order-2"
+                    >
+                        <div className="space-y-8">
+                            {/* 个人简介 */}
+                            <div className="space-y-4">
+                                <h3 className="text-xl sm:text-2xl font-semibold text-pink-300 mb-4">
+                                    Hello, I'm Yueyue Lin
+                                </h3>
+                                <p className="text-base sm:text-lg text-pink-100 leading-relaxed">
+                                    I am a Master&apos;s student in Information Science at UIUC with a passion for developing
+                                    intelligent systems and full-stack applications. Currently working as a Software Engineer
+                                    Intern at Amiggle LLC, I specialize in AI-powered solutions, leveraging cutting-edge
+                                    technologies like LangChain, OpenAI models, and cloud infrastructure.
+                                </p>
+                                <p className="text-base sm:text-lg text-pink-100 leading-relaxed">
+                                    With experience in building scalable systems from serverless backends to interactive 
+                                    frontends, I enjoy solving complex problems and creating impactful software solutions. 
+                                    I&apos;m always eager to learn new technologies and collaborate with teams to build 
+                                    innovative applications.
+                                </p>
+                            </div>
+
+                            {/* 标签按钮 */}
+                            <div className="flex flex-wrap gap-3">
+                                <TabButton
+                                    selectTab={() => handleTabChange("education")}
+                                    active={tab === "education"}
+                                >
+                                    Education
+                                </TabButton>
+                                <TabButton
+                                    selectTab={() => handleTabChange("current")}
+                                    active={tab === "current"}
+                                >
+                                    Current Role
+                                </TabButton>
+                                <TabButton
+                                    selectTab={() => handleTabChange("previous")}
+                                    active={tab === "previous"}
+                                >
+                                    Previous Experience
+                                </TabButton>
+                                <TabButton
+                                    selectTab={() => handleTabChange("skills")}
+                                    active={tab === "skills"}
+                                >
+                                    Skills
+                                </TabButton>
+                            </div>
+
+                            {/* 内容展示区域 */}
+                            <div >
+                                <div className="text-pink-100 min-h-[300px] max-h-[400px] overflow-y-auto custom-scrollbar">
+                                    {TAB_DATA.find((e) => e.id === tab).content}
+                                </div>
+                            </div>
                         </div>
-                        <div className="mt-8 text-[#b7bfc5] min-h-[300px] max-h-[300px] overflow-y-auto">
-                            {TAB_DATA.find((e) => e.id === tab).content}
-                        </div>
-                    </div>
-                </motion.div>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

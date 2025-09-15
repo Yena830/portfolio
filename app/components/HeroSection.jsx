@@ -24,7 +24,7 @@ const HeroSection = () => {
           <h1
             className={`text-white mb-4 text-4xl sm:text-5xl lg:text-8xl ${blackOpsOne.className}`}
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6F61] via-[#FF9A76] to-[#FFD8A8]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-pink-400 to-pink-500">
               HELLO, I&apos;M{" "}
             </span>
             <br></br>
@@ -47,7 +47,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-base mb-6 lg:text-2xl ">
+          <p className="text-pink-100 text-base sm:text-base mb-6 lg:text-2xl ">
             All our dreams can come true, if we have the courage to pursue
             them.✨
           </p>
@@ -66,13 +66,13 @@ const HeroSection = () => {
             w-full 
             sm:w-fit 
             rounded-full
-            bg-gradient-to-br from-[#FFB199] to-[#8B2E2E]
+            bg-gradient-to-br from-pink-400 to-pink-600
             text-white
             hover:scale-105
             duration-300
             "
             >
-              <span className="block bg-[#ffffff00] hover:bg-[#8B2E2E] rounded-full px-6 py-3 xl:px-9 xl:py-5 ">
+              <span className="block bg-[#ffffff00] hover:bg-pink-600 rounded-full px-6 py-3 xl:px-9 xl:py-5 ">
                 Hire me
               </span>
             </Link>
@@ -86,7 +86,7 @@ const HeroSection = () => {
               w-full 
               sm:w-fit 
               rounded-full
-              bg-gradient-to-br from-[#FFB199] to-[#8B2E2E]
+              bg-gradient-to-br from-pink-400 to-pink-600
               text-white
               mt-3 duration-300
               hover:scale-105"

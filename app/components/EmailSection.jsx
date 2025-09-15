@@ -73,7 +73,7 @@ const EmailSection = () => {
                     <h5 className="text-xl font-bold text-white my-2">
                         Let&apos;s Connect
                     </h5>
-                    <p className="text-[#Adb7be] mb-6 max-w-md">
+                    <p className="text-pink-100 mb-6 max-w-md">
                         I&apos;m currently looking for entry level opportunities, my inbox is
                         always open. Whether you have a question or just want to say hi,
                         I&apos;ll try my best to get back to you!
@@ -135,7 +135,7 @@ const EmailSection = () => {
                             type="email"
                             name="email"
                             required
-                            className="bg-[#312d2f] placeholder-[#ADB7BE] text-white text-sm rounded-lg block w-full p-2.5"
+                            className="bg-[#312d2f] placeholder-pink-200 text-white text-sm rounded-lg block w-full p-2.5"
                             placeholder=" yourEmail@xxx.com"
                         />
                     </div>
@@ -147,7 +147,7 @@ const EmailSection = () => {
                             type="text"
                             name="name"
                             required
-                            className="bg-[#312d2f] placeholder-[#ADB7BE] text-white text-sm rounded-lg block w-full p-2.5"
+                            className="bg-[#312d2f] placeholder-pink-200 text-white text-sm rounded-lg block w-full p-2.5"
                             placeholder="May I have your name?"
                         />
                     </div>
@@ -161,24 +161,24 @@ const EmailSection = () => {
                         <textarea
                             name="message"
                             required
-                            className="bg-[#312d2f] placeholder-[#ADB7BE] text-white text-sm rounded-lg block w-full p-2.5 h-full min-h-[120px] resize-none"
+                            className="bg-[#312d2f] placeholder-pink-200 text-white text-sm rounded-lg block w-full p-2.5 h-full min-h-[120px] resize-none"
                             placeholder="Let's talk about..."
                         />
                     </div>
                     <div className="mt-auto pt-4">
                         <button
                             type="submit"
-                            className="bg-[#8B2E2E] w-full p-2.5 rounded-lg font-bold text-white hover:bg-[#7fc3dc] duration-500"
+                            className="bg-pink-400 w-full p-2.5 rounded-lg font-bold text-white hover:bg-pink-600 duration-500"
                         >
                             Send message
                         </button>
                         {error && (
-                            <p className="text-[#FF6F61] mt-4">
+                            <p className="text-pink-400 mt-4">
                                 An error occurred. Please try again later.
                             </p>
                         )}
                         {success && (
-                            <p className="text-[#FF6F61] mt-4">Message sent successfully!</p>
+                            <p className="text-pink-400 mt-4">Message sent successfully!</p>
                         )}
                     </div>
                 </form>

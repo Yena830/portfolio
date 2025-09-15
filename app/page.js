@@ -1,3 +1,4 @@
+import WelcomeSection from "./components/WelcomeSection";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";
@@ -12,7 +13,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#171516]">
       <Navbar />
-      <div className="container mt-24 mx-auto px-12 py-4">
+      <WelcomeSection />
+      <div id="hero" className="container mt-32 mx-auto px-12 py-8">
         <HeroSection />
         <AchievementsSection />
         <AboutSection />
