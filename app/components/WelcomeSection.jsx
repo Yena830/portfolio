@@ -154,7 +154,7 @@ const WelcomeSection = () => {
             className={`text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white ${blackOpsOne.className} mb-6 text-center`}
           >
             <span className="text-transparent bg-clip-text bg-[#FFFFFF]">
-            Hello, I'm Yueyue
+            Hello, I&apos;m Yueyue
             </span>
           </motion.h1>
           

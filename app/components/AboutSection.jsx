@@ -211,7 +211,7 @@ const AboutSection = () => {
                             {/* 个人简介 */}
                             <div className="space-y-4">
                                 <h3 className="text-xl sm:text-2xl font-semibold text-pink-300 mb-4">
-                                    Hello, I'm Yueyue Lin
+                                    Hello, I&apos;m Yueyue Lin
                                 </h3>
                                 <p className="text-base sm:text-lg text-pink-100 leading-relaxed">
                                     I am a Master&apos;s student in Information Science at UIUC with a passion for developing
