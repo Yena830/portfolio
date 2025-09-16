@@ -47,6 +47,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
+          
           <p className="text-pink-100 text-base sm:text-base mb-6 lg:text-2xl ">
             All our dreams can come true, if we have the courage to pursue
             them.✨

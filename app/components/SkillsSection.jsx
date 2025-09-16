@@ -10,7 +10,7 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative sm:py-14 lg:py-28"
+      className="flex flex-col items-center justify-center gap-3 h-full relative sm:py-14 lg:py-28 h-screen"
     >
       <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl  font-bold text-white mt-8 mb-5 md:mb-10">
         Skills

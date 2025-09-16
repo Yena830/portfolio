@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Black_Ops_One } from "@next/font/google";
 import Image from "next/image";
+import TextDisperse from "./ui/text-disperse";
+import ShinyText from "./ShinyText";
 
 const blackOpsOne = Black_Ops_One({
   subsets: ["latin"],
@@ -153,9 +155,10 @@ const WelcomeSection = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className={`text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white ${blackOpsOne.className} mb-6 text-center`}
           >
-            <span className="text-transparent bg-clip-text bg-[#FFFFFF]">
-            Hello, I&apos;m Yueyue
-            </span>
+            
+            <TextDisperse className="inline-flex text-[1em] align-baseline">
+              {"Yueyue\u00A0Lin"}
+            </TextDisperse>
           </motion.h1>
           
           <motion.div
@@ -164,9 +167,9 @@ const WelcomeSection = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="text-center space-y-4"
           >
-            <h2 className="text-xl sm:text-2xl lg:text-3xl text-pink-100 font-light tracking-wide">
-              Software Developer & AI Enthusiast
-            </h2>
+            <ShinyText text="Software Developer & AI Enthusiast" disabled={false} speed={3} className="text-xl sm:text-2xl lg:text-3xl"/>
+             
+            
             
             
           </motion.div>

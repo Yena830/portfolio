@@ -13,9 +13,9 @@ const Footer = () => {
     <footer className="bg-black/20 border-t border-pink-200/20 text-white">
       <div className="container mx-auto px-6 py-12">
         {/* 主要内容区域 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* 个人品牌区域 */}
-          <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-8">
+          {/* 个人品牌区域 - 占2列 */}
+          <div className="space-y-4 md:col-span-2 order-1">
             <h3 className={`${blackOpsOne.className} text-2xl text-pink-300 mb-4`}>
               YENA
             </h3>
