@@ -42,15 +42,15 @@ const projectsData = [
     gitUrl: "https://github.com/Yena830/web-project-funny-fact",
     previewUrl: "/",
   },
-  // {
-  //   id: 5,
-  //   title: "Food Ordering Application",
-  //   description: "A Food Ordering App.",
-  //   image: "/images/projects/4.png",
-  //   tag: ["All", "Mobile"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
+  {
+    id: 5,
+    title: "AI Mock Interview Platform",
+    description: "AI Mock Interview Platform for job seekers.",
+    image: "/images/projects/4.png",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
 
 ];
 
