@@ -10,10 +10,10 @@ const projectsData = [
     id: 1,
     title: "Smart Trip App",
     description: "AI customized trip assitance App",
-    image: "/images/projects/1.jpg",
+    image: "/images/projects/1.png",
     tag: ["All", "Web", "Mobile"],
     gitUrl: "https://github.com/Yena830/travel_agent",
-    previewUrl: "https://travel-agent-gamma.vercel.app/",
+    previewUrl: "https://travel-agent-luna.vercel.app/",
   },
   {
     id: 2,
