@@ -162,7 +162,7 @@ const EmailSection = () => {
                             name="message"
                             required
                             className="bg-[#312d2f] placeholder-pink-200 text-white text-sm rounded-lg block w-full p-2.5 h-full min-h-[120px] resize-none"
-                            placeholder="Let's talk about..."
+                            placeholder="Let&apos;s talk about..."
                         />
                     </div>
                     <div className="mt-auto pt-4">

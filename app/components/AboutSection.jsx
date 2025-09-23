@@ -177,8 +177,8 @@ const AboutSection = () => {
     };
 
     return (
-        <section id="about" className="py-16 xl:py-24">
-            <div className="container mx-auto px-6">
+        <section id="about" className="py-16 xl:py-24 px-4 sm:px-6">
+            <div className="container mx-auto max-w-7xl">
                 {/* 标题区域 */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -187,7 +187,7 @@ const AboutSection = () => {
                     <div className="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* 左侧：3D场景 */}
                     <motion.div
                         ref={ref}
@@ -195,7 +195,7 @@ const AboutSection = () => {
                         variants={imageVariants}
                         animate={inView ? "visible" : "hidden"}
                         transition={{ duration: 0.8 }}
-                        className="order-2 lg:order-1 h-[400px] lg:h-[500px]"
+                        className="order-2 lg:order-1 h-[250px] sm:h-[300px] lg:h-[350px]"
                     >
                         <Scene />
                     </motion.div>
@@ -205,14 +205,14 @@ const AboutSection = () => {
                         initial={{ opacity: 0, x: 50 }}
                         animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="order-1 lg:order-2"
+                        className="order-1 lg:order-2 flex flex-col justify-center"
                     >
                         <div className="space-y-8">
                             {/* 个人简介 */}
                             <div className="space-y-4">
-                                <h3 className="text-xl sm:text-2xl font-semibold text-pink-300 mb-4">
+                                {/* <h3 className="text-xl sm:text-2xl font-semibold text-pink-300 mb-4">
                                     Hello, I&apos;m Yueyue Lin
-                                </h3>
+                                </h3> */}
                                 <p className="text-base sm:text-lg text-pink-100 leading-relaxed">
                                     I am a Master&apos;s student in Information Science at UIUC with a passion for developing
                                     intelligent systems and full-stack applications. Currently working as a Software Engineer
@@ -227,40 +227,6 @@ const AboutSection = () => {
                                 </p>
                             </div>
 
-                            {/* 标签按钮 */}
-                            <div className="flex flex-wrap gap-3">
-                                <TabButton
-                                    selectTab={() => handleTabChange("education")}
-                                    active={tab === "education"}
-                                >
-                                    Education
-                                </TabButton>
-                                <TabButton
-                                    selectTab={() => handleTabChange("current")}
-                                    active={tab === "current"}
-                                >
-                                    Current Role
-                                </TabButton>
-                                <TabButton
-                                    selectTab={() => handleTabChange("previous")}
-                                    active={tab === "previous"}
-                                >
-                                    Previous Experience
-                                </TabButton>
-                                <TabButton
-                                    selectTab={() => handleTabChange("skills")}
-                                    active={tab === "skills"}
-                                >
-                                    Skills
-                                </TabButton>
-                            </div>
-
-                            {/* 内容展示区域 */}
-                            <div >
-                                <div className="text-pink-100 min-h-[300px] max-h-[400px] overflow-y-auto custom-scrollbar">
-                                    {TAB_DATA.find((e) => e.id === tab).content}
-                                </div>
-                            </div>
                         </div>
                     </motion.div>
                 </div>

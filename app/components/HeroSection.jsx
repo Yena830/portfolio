@@ -105,15 +105,29 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-8  lg:mt-0"
         >
-          <div className="rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] relative">
-            <Image
-              src="/images/icon.jpg"
-              alt="image"
-              width={450}
-              height={450}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              style={{ borderRadius: "80%" }}
-            ></Image>
+          <div className="relative">
+            {/* 外圈光晕效果 */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400/20 via-pink-300/30 to-pink-400/20 blur-xl scale-110 animate-pulse"></div>
+            
+            {/* 中圈柔和光晕 */}
+            <div className="absolute inset-2 rounded-full bg-gradient-to-r from-pink-300/15 via-pink-200/25 to-pink-300/15 blur-lg scale-105"></div>
+            
+            {/* 主容器 */}
+            <div className="relative rounded-full bg-[#1a1919] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] shadow-2xl shadow-pink-500/20">
+              {/* 内圈阴影 */}
+              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-black/30 to-transparent"></div>
+              
+              <Image
+                src="/images/icon.jpg"
+                alt="image"
+                width={450}
+                height={450}
+                className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10"
+                style={{ borderRadius: "80%" }}
+              ></Image>
+              
+             
+            </div>
           </div>
         </motion.div>
       </div>

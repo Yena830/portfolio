@@ -4,12 +4,13 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { useInView } from "react-intersection-observer";
 import { animate, motion } from "framer-motion";
+import ProjectModal from "./ProjectModal";
 
 const projectsData = [
   {
     id: 1,
-    title: "Smart Trip App",
-    description: "AI customized trip assitance App",
+    title: "Smart Trip - AI Travel Planner",
+    description: "AI-powered travel planner built with React + Vite, integrated with Google Maps, Unsplash, and Firebase. Generates personalized itineraries with map search, city images, Google OAuth, and full itinerary management.",
     image: "/images/projects/1.png",
     tag: ["All", "Web", "Mobile"],
     gitUrl: "https://github.com/Yena830/travel_agent",
@@ -56,9 +57,19 @@ const projectsData = [
 
 const ProjectSection = () => {
   const [tag, setTag] = useState("All");
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const fileredProjects = projectsData.filter((p) => p.tag.includes(tag));
   const handleTagChange = (newTag) => {
     setTag(newTag);
+  };
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
   };
 
   const cardAnimation = {
@@ -70,11 +81,12 @@ const ProjectSection = () => {
   });
 
   return (
-    <section id="projects" className="pt-12">
-      <h2 className="text-center text-4xl font-bold text-white mt-8 mb-5 md:mb-10">
-        My Projects
-      </h2>
-      <div className="flex flex-row justify-center items-center gap-4 text-white my-6">
+    <section id="projects" className="pt-12 px-4 sm:px-6">
+      <div className="container mx-auto max-w-7xl">
+        <h2 className="text-center text-3xl sm:text-4xl font-bold text-white mt-8 mb-5 md:mb-10">
+          My Projects
+        </h2>
+        <div className="flex flex-row justify-center items-center gap-2 sm:gap-4 text-white my-6 flex-wrap">
         <ProjectTag
           name="All"
           onClick={handleTagChange}
@@ -91,7 +103,7 @@ const ProjectSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <div ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
         {fileredProjects.map((project, index) => (
           <motion.div
             key={index}
@@ -107,9 +119,12 @@ const ProjectSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              onOpenModal={() => openModal(project)}
             />
           </motion.div>
         ))}
+        </div>
+        <ProjectModal isOpen={isModalOpen} onClose={closeModal} project={selectedProject} />
       </div>
     </section>
   );

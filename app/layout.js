@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { Black_Ops_One } from "@next/font/google";
+import BackgroundParticles from "./components/BackgroundParticles";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <h1 className={`${blackOpsOne.className} antialiased`}></h1>
+        <BackgroundParticles />
         {children}
       </body>
     </html>

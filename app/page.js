@@ -2,6 +2,7 @@ import WelcomeSection from "./components/WelcomeSection";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";
+import ExperienceSection from "./components/ExperienceSection";
 import ProjectSection from "./components/ProjectSection";
 import EmailSection from "./components/EmailSection.jsx";
 import Footer from "./components/Footer.jsx";
@@ -19,6 +20,7 @@ export default function Home() {
         <HeroSection />
         <AchievementsSection />
         <AboutSection />
+        <ExperienceSection />
         {/* <div style={{ height: "50vh", width: "100%" }}>
           <Scene />
         </div> */}
