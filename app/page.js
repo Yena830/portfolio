@@ -18,7 +18,7 @@ export default function Home() {
       <WelcomeSection />
       <div id="hero" className="container mt-32 mx-auto px-12 py-8">
         <HeroSection />
-        <AchievementsSection />
+        {/* <AchievementsSection /> */}
         <AboutSection />
         <ExperienceSection />
         {/* <div style={{ height: "50vh", width: "100%" }}>
