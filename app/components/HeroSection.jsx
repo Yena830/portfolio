@@ -77,7 +77,7 @@ const HeroSection = () => {
                 Hire me
               </span>
             </Link>
-            <Link href="https://drive.google.com/file/d/1iU48BKdEjqb_4reLjQ3g-JkA6CiWUqi5/view?usp=sharing">
+            <Link href="https://drive.google.com/file/d/1WttV8Bv2C9VgNc598Ep_jwrwaJXhvqc0/view?usp=sharing">
               <button
                 className="
               text-lg
