@@ -52,6 +52,15 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "/",
   },
+  {
+    id: 6,
+    title: "PawfectMatch",
+    description: "PawfectMatch is a community-driven platform that connects pet owners with reliable helpers for pet care tasks.",
+    image: "/images/projects/6.png",
+    tag: ["All", "Web", "Mobile"],
+    gitUrl: "https://github.com/Yena830/cs409final",
+    previewUrl: "https://pawfectmatch-cs409.vercel.app/",
+  },
 
 ];
 
