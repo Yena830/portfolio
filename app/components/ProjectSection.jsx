@@ -50,7 +50,7 @@ const projectsData = [
     image: "/images/projects/4.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://amiggle.co/",
   },
   {
     id: 6,
