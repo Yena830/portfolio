@@ -17,7 +17,7 @@ const Footer = () => {
           {/* 个人品牌区域 - 占2列 */}
           <div className="space-y-4 md:col-span-2 order-1">
             <h3 className={`${blackOpsOne.className} text-2xl text-pink-300 mb-4`}>
-              YENA
+              HappyMoon
             </h3>
             <p className="text-pink-100 text-sm leading-relaxed">
               Software Developer & AI Enthusiast passionate about creating 

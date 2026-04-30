@@ -31,9 +31,9 @@ const HeroSection = () => {
             <TypeAnimation className="text-[#F5F5F5]"
               sequence={[
                 // Same substring at the start will only be typed out once, initially
-                "Yena",
-                1000,
                 "Yueyue Lin",
+                1000,
+                "Joy Lin",
                 1000,
                 "UIUC’er",
                 1000,
@@ -41,6 +41,8 @@ const HeroSection = () => {
                 1000,
                 "Full Stack Dev",
                 1000,
+                "Happy Moon",
+                1000
               ]}
               wrapper="span"
               speed={50}

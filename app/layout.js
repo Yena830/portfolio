@@ -20,8 +20,8 @@ const blackOpsOne = Black_Ops_One({
 });
 
 export const metadata = {
-  title: "Yena",
-  description: "Designed by Yena",
+  title: "HappyMoon",
+  description: "Designed by HappyMoon",
 };
 
 export default function RootLayout({ children }) {
